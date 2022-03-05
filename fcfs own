@@ -1,0 +1,35 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+//pid=0,1,2,3
+//Arival time is 0 for all
+//Burst time=2,2,3,5
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int pid[]=new int[4];
+		pid[0]=0;
+        pid[1]=1;
+        pid[2]=2;
+        pid[3]=3;
+        int bt[]=new int[4];
+        bt[0]=2;
+        bt[1]=2;
+        bt[2]=3;
+        bt[3]=5;
+     
+        int at=0;
+        int comp[]=new int[4];
+        for(i=0;i<5;i++){
+          comp[i]=comp[i]+bt[i];  
+        }  
+        
+
+	}
+}
