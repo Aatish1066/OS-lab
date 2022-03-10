@@ -1,0 +1,16 @@
+ int  ascending_swap(int bta[] , int pida[], int n){
+            for( int i=0;i<=n;i++){
+                  if(bt[i]>bt[i+1]){
+                      int tempbt,tempid;
+                      tempbt=bt[i+1];
+                      tempid=pid[i+1];
+                      bt[i+1]=bt[i];
+                      pid[i+1]=pid[i];
+                      pid[i]=tempid;
+                      bt[i]=tempbt;
+                      
+                  }
+  
+            }
+            return 0;  
+      }
