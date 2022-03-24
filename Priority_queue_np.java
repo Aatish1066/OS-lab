@@ -11,14 +11,14 @@ class PNPT{
         bt[2]=2;
         bt[3]=2;
 
-        int[] pt =new int[4];//declaration and allotment of burst time array 
-        pt[0]=4;
-        pt[1]=3;
+        int[] pt =new int[4];//declaration of priority
+        pt[0]=1;
+        pt[1]=4;
         pt[2]=2;
-        pt[3]=1;
+        pt[3]=3;
       
       
-      priority_swap(pt,pid,2);
+      priority_swap(pt,pid,bt,2);
 
         int at=0;//declaration of arrival time
         //Can be changed with a array logic is made
@@ -45,12 +45,12 @@ class PNPT{
     }
 
     for(int i=0;i<4;i++){
-        System.out.println("the turn around time is :"+tat[i]);
+        System.out.println("the turn around time for "+(pid [i]+1)+" :"+tat[i]);
         //printing individual TAT time of the process
 
     }
     for(int i=0;i<4;i++){
-        System.out.println("the wating time is :"+wt[i]);
+        System.out.println("the wating time for "+(pid [i]+1)+" is :"+wt[i]);
         //printing individual wait time
 
     }
@@ -66,19 +66,23 @@ class PNPT{
   //avg wait time
 }
 
-    private static void priority_swap(int[] pt, int[] pid, int n) {
+    private static void priority_swap(int[] pt, int[] pid,int[] bt, int n) {
         for( int i=0;i<=n;i++){
             if(pt[i]>pt[i+1]){
-                int tempbt,tempid;
-                tempbt=pt[i+1];
+                int temppt,tempid;
+                temppt=pt[i+1];
                 tempid=pid[i+1];
                 pt[i+1]=pt[i];
                 pid[i+1]=pid[i];
                 pid[i]=tempid;
-                pt[i]=tempbt;
-                
+                pt[i]=temppt;
+                int tempbt;
+                tempbt=bt[i+1];
+                tempid=pid[i+1];
+                bt[i+1]=bt[i];
+                bt[i]=tempbt;
+               
             }
-
       }
     }
 }
