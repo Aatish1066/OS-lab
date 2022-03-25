@@ -1,2 +1,2 @@
 # OS-lab
-This repo contains lab work for **OS lab 2021** done by  **Aatish Sharma**
+This repo contains lab work for **OS lab 2022** done by  **Aatish Sharma**
