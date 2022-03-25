@@ -3,6 +3,9 @@
 /*pid=0,1,2,3
 Arival time is 0 for all
 Burst time=5,3,2,2*/
+
+// change file name to main to execute
+
 public class Main{
     public static void main(String[] args) {
         int[] pid =new int[4];//declaration and allotment of process id's
