@@ -5,11 +5,13 @@ class RoundRobin{
         pid[1]=1;
         pid[2]=2;
         pid[3]=3;
+        
         int[] bt =new int[4];//declaration and allotment of burst time array 
         bt[0]=2;
         bt[1]=2;
         bt[2]=3;
         bt[3]=5;
+        
         int[] at =new int[4];//declaration and allotment of arrival  time array 
         at[0]=0;
         at[1]=1;
