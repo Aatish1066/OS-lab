@@ -1,9 +1,7 @@
-package mypackage;
-
 /*pid=0,1,2,3
 Arival time is 0 for all
 Burst time=2,2,3,5*/
-public class FCFC //class with main function
+public class FCFS //class with main function
 {
     public static void main(String[] args) {//main function 
         int[] pid =new int[4];//declaration and allotment of process id's

@@ -1,9 +1,4 @@
-package mypackage;
-
-import java.util.*;
-import java.io.*;
-public class SRTF
-{
+public class SRTF{
 //Assuming arrival time is sorted
 public static void schedule(int[] pid,int[] run,int[] arrival)
 {
