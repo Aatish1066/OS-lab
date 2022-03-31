@@ -74,7 +74,7 @@ class Priority_queue_premmptive{
 
                 if(at[i]==0){
 
-                    //make logic that can switch the whole program with preemption 
+            //make logic that can switch the whole program with preemption 
                     
                 }
                 int temppt,tempid;
