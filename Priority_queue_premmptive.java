@@ -17,15 +17,17 @@ class Priority_queue_premmptive{
         pt[2]=2;
         pt[3]=3;
       
-      
-      priority_swap(pt,pid,bt,2);
+        int[] at =new int[4];//declaration of arrival time
+        at[0]=0;
+        at[1]=3;
+        at[2]=2;
+        at[3]=1;
 
-        int at=0;//declaration of arrival time
-        //Can be changed with a array logic is made
+      priority_swap(pt,pid,bt,at,2);
+
         int[] comp =new int[5];//completion time declaration
         int[] tat =new int[5]; //TAT declaration array
-        //Need of a sorting algorithm on the the arrival
-        // time if hte array of arrival time is required 
+        
         
         for(int i=0;i<4;i++){
             comp[i+1]=comp[i]+bt[i];//makinng array of individual completion time 
@@ -35,7 +37,7 @@ class Priority_queue_premmptive{
      
     
     for (int i = 0; i < 4; i++) {
-        tat[i]=comp[i+1]-at; //TAT calculation as the formula suggest
+        tat[i]=comp[i+1]-at[i]; //TAT calculation as the formula suggest
 
     }
     int[] wt =new int[5];
@@ -66,9 +68,15 @@ class Priority_queue_premmptive{
   //avg wait time
 }
 
-    private static void priority_swap(int[] pt, int[] pid,int[] bt, int n) {
+    private static void priority_swap(int[] pt, int[] pid,int[] bt,int[] at, int n) {
         for( int i=0;i<=n;i++){
             if(pt[i]>pt[i+1]){
+
+                if(at[i]==0){
+
+                    //make logic that can switch the whole program with preemption 
+                    
+                }
                 int temppt,tempid;
                 temppt=pt[i+1];
                 tempid=pid[i+1];
