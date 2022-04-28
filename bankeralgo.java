@@ -10,9 +10,7 @@ class bankeralgo
                  need[i][j] = maxm[i][j] - allot[i][j];
     }
 
-
-    static boolean isSafe(int processes[], int avail[], int maxm[][],
-                          int allot[][])
+    static boolean isSafe(int processes[], int avail[], int maxm[][], int allot[][])
     {
         int [][]need = new int[P][R];
         calculateNeed(need, maxm, allot);
@@ -68,9 +66,7 @@ class bankeralgo
     {
         int processes[] = {0, 1, 2, 3, 4};
 
-
         int avail[] = {3, 3, 2};
-
 
         int maxm[][] = {{7, 5, 3},
                 {3, 2, 2},
@@ -78,13 +74,11 @@ class bankeralgo
                 {2, 2, 2},
                 {4, 3, 3}};
 
-
         int allot[][] = {{0, 1, 0},
                 {2, 0, 0},
                 {3, 0, 2},
                 {2, 1, 1},
                 {0, 0, 2}};
-        
         isSafe(processes, avail, maxm, allot);
     }
 }
